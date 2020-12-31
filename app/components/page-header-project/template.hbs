@@ -48,28 +48,6 @@
     </a>
   </dd.Trigger>
   <dd.Content class="project-menu" style={{menuStyle}}>
-    <div class="global">
-      <ul class="list-unstyled">
-        <li
-          class="item clip
-            {{if (eq pageScope "global") "active selected" "inactive"}}"
-        >
-          <a
-            href="{{href-to "global-admin"}}"
-            class="{{if (eq pageScope "global") "active selected" "inactive"}}"
-          >
-            {{t "nav.admin.tab"}}
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="search">
-      {{input
-        type="text"
-        placeholder=(t "nav.projectDropdown.search")
-        value=searchInput
-      }}
-    </div>
     <div class="clusters">
       <label class="acc-label">
         {{t "nav.projectDropdown.clusters"}}
@@ -143,7 +121,7 @@
             >
               {{#link-to "authenticated.project" entry.project.id class="top"}}
                 {{entry.searchMatch}}
-              {{/link-to}}
+              {{/link-to}}endoflink
               <p class="state">
                 {{t
                   "nav.projectDropdown.projectInCluster"
